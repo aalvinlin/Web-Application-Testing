@@ -1,6 +1,8 @@
 import React from "react";
 
-const Display = () => {
+const Display = ({gameStatus, setGameStatus}) => {
+
+    const {strikes, balls, fouls, hits} = gameStatus;
 
     return (
         <div className="display">
@@ -8,9 +10,9 @@ const Display = () => {
 
             <div className="stats">
                 <p>Strikes: {strikes}</p>
-                <p>Balls: {strikes}</p>
-                <p>Fouls: {strikes}</p>
-                <p>Hits: {strikes}</p>
+                <p>Balls: {balls}</p>
+                <p>Fouls: {fouls}</p>
+                <p>Hits: {hits}</p>
             </div>
         </div>
     )

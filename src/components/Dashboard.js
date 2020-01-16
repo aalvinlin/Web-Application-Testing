@@ -1,12 +1,37 @@
 import React, { useState } from "react";
 import useForm from "./hooks/useForm";
 
-const Dashboard = () => {
+const Dashboard = ({gameStatus, setGameStatus}) => {
 
-    const [strikes, setStrikes, handleStrikes] = useForm(0);
-    const [balls, setBalls, handleBalls] = useForm(0);
-    const [fouls, setFouls, handleFouls] = useForm(0);
-    const [hits, setHits, handleHits] = useForm(0);
+    // const [strikes, setStrikes, handleStrikes] = useForm(0);
+    // const [balls, setBalls, handleBalls] = useForm(0);
+    // const [fouls, setFouls, handleFouls] = useForm(0);
+    // const [hits, setHits, handleHits] = useForm(0);
+
+    const handleStrikes = () => {
+
+        const newStrikes = gameStatus.strikes + 1;
+
+        if (newStrikes > 3)
+        {
+            newStrikes = 0;
+        }
+
+        setGameStatus({ ...gameStatus, strikes: newStrikes})
+    }
+
+const handleStrikes = () => {
+
+        const newStrikes = gameStatus.strikes + 1;
+
+        if (newStrikes > 3)
+        {
+            newStrikes = 0;
+        }
+
+        setGameStatus({ ...gameStatus, strikes: newStrikes})
+    }
+
 
     return (
 
