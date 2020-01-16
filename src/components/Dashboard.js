@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import useForm from "./hooks/useForm";
 
 const Dashboard = ({gameStatus, setGameStatus}) => {
 
@@ -8,30 +7,10 @@ const Dashboard = ({gameStatus, setGameStatus}) => {
     // const [fouls, setFouls, handleFouls] = useForm(0);
     // const [hits, setHits, handleHits] = useForm(0);
 
-    const handleStrikes = () => {
+    const updateGameState = (typeOfHit) => {
 
-        const newStrikes = gameStatus.strikes + 1;
-
-        if (newStrikes > 3)
-        {
-            newStrikes = 0;
-        }
-
-        setGameStatus({ ...gameStatus, strikes: newStrikes})
+        setGameStatus(updateWithAction(gameStatus, typeOfHit));
     }
-
-const handleStrikes = () => {
-
-        const newStrikes = gameStatus.strikes + 1;
-
-        if (newStrikes > 3)
-        {
-            newStrikes = 0;
-        }
-
-        setGameStatus({ ...gameStatus, strikes: newStrikes})
-    }
-
 
     return (
 
@@ -39,10 +18,10 @@ const handleStrikes = () => {
             <h2>Dashboard</h2>
             
             <form name="dashboardForm">
-                <button name="strike" onClick={handleStrikes}>Strike</button>
-                <button name="ball" onClick={handleBalls}>Ball</button>
-                <button name="foul" onClick={handleFouls}>Foul</button>
-                <button name="hit" onClick={handleHits}>Hit</button>
+                <button name="strike" onClick={() => updateGameState("strike")}>Strike</button>
+                <button name="ball" onClick={() => updateGameState("ball")}>Ball</button>
+                <button name="foul" onClick={() => updateGameState("foul")}>Foul</button>
+                <button name="hit" onClick={() => updateGameState("hit")}>Hit</button>
             </form>
         </div>
     )
