@@ -2,7 +2,7 @@ import setBallsAndStrikesToZero from "./setBallsAndStrikesToZero";
 
 const updateWithStrike = (gameStatus) => {
 
-    let [balls, strikes, fouls, hits] = gameStatus;
+    let {balls, strikes, fouls, hits} = gameStatus;
 
     strikes += 1;
 

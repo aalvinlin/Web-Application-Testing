@@ -6,8 +6,10 @@ const updateWithBall = (gameStatus) => {
 
     if (strikes < 2)
         { strikes += 1; }
+    
+    fouls += 1;
 
-    return {...gameStatus, strikes: strikes};
+    return {...gameStatus, strikes: strikes, fouls: fouls};
     
 }
 

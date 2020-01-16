@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import updateWithAction from "../utils/updateWithAction";
 
 const Dashboard = ({gameStatus, setGameStatus}) => {
 
@@ -18,10 +19,10 @@ const Dashboard = ({gameStatus, setGameStatus}) => {
             <h2>Dashboard</h2>
             
             <form name="dashboardForm">
-                <button name="strike" onClick={() => updateGameState("strike")}>Strike</button>
-                <button name="ball" onClick={() => updateGameState("ball")}>Ball</button>
-                <button name="foul" onClick={() => updateGameState("foul")}>Foul</button>
-                <button name="hit" onClick={() => updateGameState("hit")}>Hit</button>
+                <button name="strike" onClick={(event) => {event.preventDefault(); updateGameState("strike")}}>Strike</button>
+                <button name="ball" onClick={() => {event.preventDefault(); updateGameState("ball")}}>Ball</button>
+                <button name="foul" onClick={() => {event.preventDefault(); updateGameState("foul")}}>Foul</button>
+                <button name="hit" onClick={() => {event.preventDefault(); updateGameState("hit")}}>Hit</button>
             </form>
         </div>
     )

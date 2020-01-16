@@ -7,16 +7,16 @@ const updateWithAction = (gameStatus, action) => {
 
     switch (action)
         {
-            case ball:
+            case "ball":
                 return updateWithBall(gameStatus);
             
-            case strike:
+            case "strike":
                 return updateWithStrike(gameStatus);
 
-            case hit:
+            case "hit":
                 return updateWithHit(gameStatus);
 
-            case foul:
+            case "foul":
                 return updateWithFoul(gameStatus);
         }
 }

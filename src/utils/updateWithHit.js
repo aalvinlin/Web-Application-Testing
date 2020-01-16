@@ -6,7 +6,9 @@ const updateWithBall = (gameStatus) => {
 
     [balls, strikes] = setBallsAndStrikesToZero();
 
-    return {...gameStatus, balls: balls, strikes: strikes};
+    fouls = 0;
+
+    return {...gameStatus, balls: balls, strikes: strikes, fouls: fouls};
 }
 
 export default updateWithBall;
