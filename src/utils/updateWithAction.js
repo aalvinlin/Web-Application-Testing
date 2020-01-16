@@ -3,21 +3,21 @@ import updateWithStrike from "./updateWithStrike";
 import updateWithHit from "./updateWithHit";
 import updateWithFoul from "./updateWithFoul";
 
-const updateWithAction = (gameStatArray, action) => {
+const updateWithAction = (gameStatus, action) => {
 
     switch (action)
         {
             case ball:
-                return updateWithBall(gameStatArray);
+                return updateWithBall(gameStatus);
             
             case strike:
-                return updateWithStrike(gameStatArray);
+                return updateWithStrike(gameStatus);
 
             case hit:
-                return updateWithHit(gameStatArray);
+                return updateWithHit(gameStatus);
 
             case foul:
-                return updateWithFoul(gameStatArray);
+                return updateWithFoul(gameStatus);
         }
 }
 

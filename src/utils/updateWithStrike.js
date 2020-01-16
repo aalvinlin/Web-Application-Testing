@@ -1,15 +1,15 @@
 import setBallsAndStrikesToZero from "./setBallsAndStrikesToZero";
 
-const updateWithStrike = (gameStatArray) => {
+const updateWithStrike = (gameStatus) => {
 
-    let [balls, strikes, fouls, hits] = gameStatArray;
+    let [balls, strikes, fouls, hits] = gameStatus;
 
     strikes += 1;
 
     if (strikes === 3)
         { [balls, strikes] = setBallsAndStrikesToZero(); }
 
-    return [balls, strikes, fouls, hits];
+    return {...gameStatus, balls: balls, strikes: strikes};
     
 }
 
