@@ -1,0 +1,45 @@
+{
+  "name": "web-application-testing",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest --watchAll"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "app.css": "^0.1.2",
+    "jest": "^24.9.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-testing-library": "^8.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "babel-preset-nano-react-app": "^0.1.0",
+    "jest": "^24.9.0",
+    "jest-dom": "^4.0.0",
+    "parcel-bundler": "^1.12.3"
+  },
+  "babel": {
+    "presets": [
+      "nano-react-app"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
+      ],
+      [
+        "@babel/plugin-transform-react-jsx",
+        {
+          "pragmaFrag": "React.Fragment"
+        }
+      ]
+    ]
+  }
+}
