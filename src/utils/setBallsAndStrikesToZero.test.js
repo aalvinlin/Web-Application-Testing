@@ -1,5 +1,4 @@
 import * as rtl from "@testing-library/react";
-import { render } from '@testing-library/react';
 
 import setBallsAndStrikesToZero from "./setBallsAndStrikesToZero";
 
