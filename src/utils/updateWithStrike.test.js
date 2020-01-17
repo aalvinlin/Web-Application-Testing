@@ -39,7 +39,7 @@ test("Strike count is incremented to the next number when it is below 2 to begin
     let gameStatus = { strikes: 0, balls: 0, fouls: 0, hits: 0 }
     expect(gameStatus.strikes.toBe(1));
 
-    let gameStatus = { strikes: 1, balls: 0, fouls: 0, hits: 0 }
+    gameStatus = { strikes: 1, balls: 0, fouls: 0, hits: 0 }
     expect(gameStatus.strikes.toBe(2));
 
 

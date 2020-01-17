@@ -39,10 +39,10 @@ test("Ball count is incremented to the next number when it is below 3 to begin w
     let gameStatus = { strikes: 0, balls: 0, fouls: 0, hits: 0 }
     expect(gameStatus.balls.toBe(1));
 
-    let gameStatus = { strikes: 0, balls: 1, fouls: 0, hits: 0 }
+    gameStatus = { strikes: 0, balls: 1, fouls: 0, hits: 0 }
     expect(gameStatus.balls.toBe(2));
 
-    let gameStatus = { strikes: 0, balls: 2, fouls: 0, hits: 0 }
+    gameStatus = { strikes: 0, balls: 2, fouls: 0, hits: 0 }
     expect(gameStatus.balls.toBe(3));
 
   });

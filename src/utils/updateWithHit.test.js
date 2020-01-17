@@ -39,16 +39,16 @@ test("Hit count is incremented by 1", () => {
     let gameStatus = { strikes: 0, balls: 0, fouls: 0, hits: 0 }
     expect(gameStatus.hits.toBe(1));
 
-    let gameStatus = { strikes: 1, balls: 0, fouls: 0, hits: 4 }
+    gameStatus = { strikes: 1, balls: 0, fouls: 0, hits: 4 }
     expect(gameStatus.hits.toBe(5));
 
-    let gameStatus = { strikes: 0, balls: 0, fouls: 0, hits: 22 }
+    gameStatus = { strikes: 0, balls: 0, fouls: 0, hits: 22 }
     expect(gameStatus.hits.toBe(23));
 
-    let gameStatus = { strikes: 1, balls: 0, fouls: 0, hits: 17 }
+    gameStatus = { strikes: 1, balls: 0, fouls: 0, hits: 17 }
     expect(gameStatus.hits.toBe(18));
 
-    let gameStatus = { strikes: 0, balls: 0, fouls: 0, hits: 500 }
+    gameStatus = { strikes: 0, balls: 0, fouls: 0, hits: 500 }
     expect(gameStatus.hits.toBe(501));
 
   });
@@ -58,13 +58,13 @@ test("updateWithHit resets strike count to 0", () => {
     let gameStatus = { strikes: 2, balls: 4, fouls: 5, hits: 9 }
     expect(gameStatus.strikes.toBe(0));
 
-    let gameStatus = { strikes: 8, balls: 1, fouls: 2, hits: 165 }
+    gameStatus = { strikes: 8, balls: 1, fouls: 2, hits: 165 }
     expect(gameStatus.strikes.toBe(0));
 
-    let gameStatus = { strikes: 12, balls: 19, fouls: 1, hits: 3 }
+    gameStatus = { strikes: 12, balls: 19, fouls: 1, hits: 3 }
     expect(gameStatus.strikes.toBe(0));
 
-    let gameStatus = { strikes: 97, balls: 8, fouls: 13, hits: 44 }
+    gameStatus = { strikes: 97, balls: 8, fouls: 13, hits: 44 }
     expect(gameStatus.strikes.toBe(0));
 
   });
@@ -74,13 +74,13 @@ test("updateWithHit resets ball count to 0", () => {
     let gameStatus = { strikes: 2, balls: 4, fouls: 5, hits: 9 }
     expect(gameStatus.balls.toBe(0));
 
-    let gameStatus = { strikes: 8, balls: 1, fouls: 2, hits: 165 }
+    gameStatus = { strikes: 8, balls: 1, fouls: 2, hits: 165 }
     expect(gameStatus.balls.toBe(0));
 
-    let gameStatus = { strikes: 12, balls: 19, fouls: 1, hits: 3 }
+    gameStatus = { strikes: 12, balls: 19, fouls: 1, hits: 3 }
     expect(gameStatus.balls.toBe(0));
 
-    let gameStatus = { strikes: 97, balls: 8, fouls: 13, hits: 44 }
+    gameStatus = { strikes: 97, balls: 8, fouls: 13, hits: 44 }
     expect(gameStatus.balls.toBe(0));
 
   });
@@ -90,13 +90,13 @@ test("updateWithHit resets foul count to 0", () => {
     let gameStatus = { strikes: 2, balls: 4, fouls: 5, hits: 9 }
     expect(gameStatus.fouls.toBe(0));
 
-    let gameStatus = { strikes: 8, balls: 1, fouls: 2, hits: 165 }
+    gameStatus = { strikes: 8, balls: 1, fouls: 2, hits: 165 }
     expect(gameStatus.fouls.toBe(0));
 
-    let gameStatus = { strikes: 12, balls: 19, fouls: 1, hits: 3 }
+    gameStatus = { strikes: 12, balls: 19, fouls: 1, hits: 3 }
     expect(gameStatus.fouls.toBe(0));
 
-    let gameStatus = { strikes: 97, balls: 8, fouls: 13, hits: 44 }
+    gameStatus = { strikes: 97, balls: 8, fouls: 13, hits: 44 }
     expect(gameStatus.fouls.toBe(0));
 
   });
